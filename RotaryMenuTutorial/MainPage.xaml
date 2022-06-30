@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RotaryMenuTutorial"
+             x:Class="RotaryMenuTutorial.MainPage"
+             xmlns:views="clr-namespace:RotaryMenuTutorial.Views"
+             xmlns:viewModels="clr-namespace:RotaryMenuTutorial.ViewModel"
+             Title="Radial Menu">
+    <!--  Setting Binding   -->
+    <ContentPage.BindingContext>
+        <viewModels:MainViewModel/>
+    </ContentPage.BindingContext>
+    <!--  Setting Binding   -->
+    <AbsoluteLayout>
+        
+    <views:RadialMenu  ItemSource="{Binding ItemSource}"></views:RadialMenu>
+
+    <Button Text="Edit" Command="{Binding OpenEditMenuPageCommand}" AbsoluteLayout.LayoutBounds="0.5, 1, 150, 60" Margin="5" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+    </AbsoluteLayout>
+</ContentPage>
